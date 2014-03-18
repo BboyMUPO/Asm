@@ -1,0 +1,9 @@
+def hexfile(file_path):
+    fp=open(file_path)
+    while True:
+        data = fp.read(4)
+        if not data:
+            break
+        print data.encode('hex')
+        
+hexfile('E:\\Python\Hacks\hexviewer.py') #test address was used by me when testing the app
