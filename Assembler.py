@@ -81,6 +81,9 @@ def process_line(line):
     
     line = re.sub('BICS', '0100001110', line)
     
+    line = re.sub('STR', '0101000', line)
+    
+    
     print(line) 
 
 line1=raw_input()
