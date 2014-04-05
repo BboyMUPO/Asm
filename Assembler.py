@@ -45,21 +45,41 @@ def process_line(line):
     
     line = re.sub('BLX', '010001111', line)
     
-    line = re.sub('ADDS', '00110', line)
+    line = re.sub('LSL', '00000', line)
     
-    line = re.sub('MOV', '00100', line)
+    line = re.sub('LSR', '00001', line)
+    
+    line = re.sub('ASR', '00010', line)
+    
+    line = re.sub('ADD', '0001100', line)
+    
+    line = re.sub('SUB', '0001101', line)
+    
+    line = re.sub('ADDS', '0001110', line)
+    
+    line = re.sub('SUBS', '0001111', line)
+    
+    line = re.sub('MOVS', '00100', line)
     
     line = re.sub('CMP', '00101', line)
     
-    line = re.sub('STR', '01100', line)
+    line = re.sub('AND', '0100000000', line)
     
-    line = re.sub('LDR', '01101', line)
+    line = re.sub('EOR', '0100000001', line)
     
-    line = re.sub('SVC', '11011111', line)
+    line = re.sub('LSLS', '0100000010', line)
     
-    line = re.sub('EQ', '0000', line)
+    line = re.sub('LSRS', '0100000011', line)
     
-    line = re.sub('NE', '0001', line)
+    line = re.sub('ASRS', '0100000100', line)
+    
+    line = re.sub('ADCS', '0100000101', line)
+    
+    line = re.sub('SBCS', '0100000110', line)
+    
+    line = re.sub('RORS', '0100000111', line)
+    
+    line = re.sub('BICS', '0100001110', line)
     
     print(line) 
 
